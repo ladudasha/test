@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <title>gulp project</title>
+  </head>
+  <body>
+    <section class="main">
+      <div class="main__wrapp">
+        <div class="main__sidebar">
+          <p class="main__label">Sign up</p>
+        </div>
+
+        <div class="main__content">
+          <h2 class="main__title">New user?</h2>
+          <p class="main__text">Use the form below to create your account.</p>
+          <form
+            class="main__form form"
+            id="form_id"
+            method="post"
+            action=""
+            onsubmit="javascript:return validate('form_id','email');"
+          >
+            <div class="form__field form__field-first">
+              <label class="form__label form__label-first" for="name"
+                >First Name
+              </label>
+              <input class="form__input" type="text" name="name" id="name" />
+            </div>
+
+            <div class="form__field form__field-last">
+              <label class="form__label">Last Name </label>
+              <input class="form__input" type="text" name="name" />
+            </div>
+
+            <div class="form__field form__field-nationality">
+              <label class="form__label">Nationality</label>
+
+              <div class="form__select-block">
+                <select class="form__input form__select" name="category">
+                  <option value="Moscow">Moscow</option>
+                  <option value="American" selected>American</option>
+                  <option value="Minsk">Minsk</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__field form__field-mail">
+              <label class="form__label">E-mail</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form__input form__input-mail"
+                type="text"
+              />
+              <img
+                id="check"
+                class="form__check"
+                src="./assets/images/check.svg"
+                alt=""
+              />
+            </div>
+
+            <div class="form__field form__field-birdth">
+              <label class="form__label">Date of Birth</label>
+              <div class="form__select-wrapp">
+                <div class="form__select-block ">
+                  <select class="form__select form__select-day" id="day"></select>
+                </div>
+                <div class="form__select-block ">
+                  <select class="form__select form__select-month" name="month"></select>
+                </div>
+                <div class="form__select-block ">
+                  <select class="form__select form__select-year" id="year"></select>
+                </div>
+              </div>
+              
+              <!-- <input class="form__input" type="text" name="name" id="name" /> -->
+            </div>
+
+            <div class="form__field form__field-gender">
+              <label class="form__label">Gender</label>
+
+              <div class="form__field-checkboxes">
+                <div>
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    checked
+                  />
+                  <label for="male">Male</label>
+                </div>
+
+                <div>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                  />
+                  <label for="female">Female</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field form__field-password">
+              <label class="form__label">Password</label>
+              <input class="form__input" type="text" name="name" />
+            </div>
+
+            <div class="form__field form__field-confirm">
+              <label class="form__label">Confirm Password</label>
+              <input class="form__input" type="text" name="name" />
+            </div>
+          </form>
+
+          <div class="main__footer">
+            <div class="main__login">
+              <p class="main__footer-text">
+                Have an account?
+                <span><a class="main__login-link" href="">Login</a></span>
+              </p>
+              <!-- <a class="main__login-link" href="">Login</a> -->
+            </div>
+            <button class="main__btn">Complete Signup</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

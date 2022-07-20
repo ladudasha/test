@@ -1,0 +1,74 @@
+.main {
+    max-width: 665px;
+    width: 100%;
+    margin: 0 auto;
+    &__wrapp {
+        background-color: #fff;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__sidebar {
+        background: #5a61ed;
+        width: 137px;
+        position: relative;
+    }
+    &__content {
+        padding: 40px 22px 33px 21px;
+    }
+    &__title {
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: -0.46px;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -0.46px;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        &-text {
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+
+    &__label {
+        font-family: "PT Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 49px;
+        position: absolute;
+        bottom: 22px;
+        right: 6px;
+        line-height: 63px;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        transform: scale(-1);
+        writing-mode: vertical-rl;
+    }
+    &__btn {
+        padding: 7px 25px;
+        background: #5a61ed;
+        width: 153px;
+        height: 32px;
+        font-family: "PT Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    &__login {
+        display: flex;
+        &-link {
+            color: #5a61ed;
+            text-decoration: underline;
+        }
+    }
+}

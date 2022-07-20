@@ -1,0 +1,156 @@
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 235px);
+    grid-template-rows: repeat(4, 42px);
+    column-gap: 13px;
+    row-gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 104px;
+    &__text {
+        font-family: "Work Sans", sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        color: #111111;
+    }
+    &__field {
+        position: relative;
+        &-checkboxes {
+            display: flex;
+            gap: 20px;
+        }
+        &-first {
+            visibility: hidden;
+            animation: visible 2s linear 1s forwards;
+        }
+        &-last {
+            visibility: hidden;
+            animation: visible 2s linear 2s forwards;
+        }
+        &-nationality {
+            visibility: hidden;
+            animation: visible 2s linear 3s forwards;
+        }
+        &-mail {
+            visibility: hidden;
+            animation: visible 2s linear 4s forwards;
+        }
+        &-birdth {
+            visibility: hidden;
+            animation: visible 2s linear 5s forwards;
+        }
+        &-gender {
+            visibility: hidden;
+            animation: visible 2s linear 6s forwards;
+        }
+        &-password {
+            visibility: hidden;
+            animation: visible 2s linear 7s forwards;
+        }
+        &-confirm {
+            visibility: hidden;
+            animation: visible 2s linear 8s forwards;
+        }
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        height: 27px;
+        padding-bottom: 6px;
+        border: none;
+        border-bottom: 1px solid #f2f2f2;
+        background-color: transparent;
+        outline: 0;
+        font-size: 14px;
+        &-mail {
+            position: relative;
+        }
+    }
+    &__check {
+        width: 11px;
+        height: 8px;
+        position: absolute;
+        top: 62%;
+        right: 10px;
+        display: none;
+    }
+    // стилизация выпадающего списка
+    &__select {
+        font-size: 14px;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        border-bottom: 1px solid #f2f2f2;
+        // Убираем стрелку в IE 10
+        &__select::-ms-expand {
+            display: none;
+        }
+        &-block {
+            position: relative;
+            &::before {
+                @include pseudo;
+                top: 8px;
+                right: 0px;
+                background-image: url("../images/row.svg");
+                @include background;
+                pointer-events: none;
+                width: 8px;
+                height: 4px;
+            }
+        }
+        &-day {
+            display: block;
+            width: 56px;
+            
+
+        }
+        &-month {
+            display: block;
+            width: 91px;
+           
+
+        }
+        &-year {
+            display: block;
+            width: 68px;
+            
+
+        }
+
+        &-wrapp {
+            display: flex;
+            &:first-child {
+                max-width: 56px;
+                width: 100%;
+            }
+            &::nth-child(2n) {
+                max-width: 91px;
+                width: 100%;
+            }
+            &:last-child {
+                max-width: 68px;
+                width: 100%;
+            }
+        }
+    }
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+        font-family: "Work Sans", sans-serif;
+        font-size: 12px;
+        line-height: 14px;
+        color: #7c7c7c;
+    }
+}
+
+@keyframes visible {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
