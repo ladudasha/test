@@ -375,20 +375,16 @@ template {
 }
 
 .main {
-    max-width: 665px;
-    width: 100%;
-    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
 }
 
 .main__wrapp {
     background-color: #fff;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin: auto;
 }
 
 .main__sidebar {
@@ -398,7 +394,15 @@ template {
 }
 
 .main__content {
+    position: relative;
     padding: 40px 22px 33px 21px;
+}
+
+.main__content-bg {
+    width: 358px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .main__title {
@@ -477,6 +481,13 @@ template {
     row-gap: 16px;
     margin-top: 20px;
     margin-bottom: 104px;
+}
+
+@media screen and (max-width: 700px) {
+    .form {
+        grid-template-columns: repeat(1, 235px);
+        grid-template-rows: repeat(8, 42px);
+    }
 }
 
 .form__text {
@@ -570,6 +581,7 @@ template {
 }
 
 .form__select {
+    font-size: 14px;
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -584,11 +596,11 @@ template {
     display: none;
 }
 
-.form__select-wrapper {
+.form__select-block {
     position: relative;
 }
 
-.form__select-wrapper::before {
+.form__select-block::before {
     content: "";
     display: block;
     position: absolute;
@@ -601,6 +613,42 @@ template {
     pointer-events: none;
     width: 8px;
     height: 4px;
+}
+
+.form__select-day {
+    display: block;
+    width: 56px;
+}
+
+.form__select-month {
+    display: block;
+    width: 91px;
+}
+
+.form__select-year {
+    display: block;
+    width: 68px;
+}
+
+.form__select-wrapp {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+}
+
+.form__select-wrapp:first-child {
+    max-width: 56px;
+    width: 100%;
+}
+
+.form__select-wrapp::nth-child(2n) {
+    max-width: 91px;
+    width: 100%;
+}
+
+.form__select-wrapp:last-child {
+    max-width: 68px;
+    width: 100%;
 }
 
 .form__label {

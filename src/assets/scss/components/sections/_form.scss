@@ -6,6 +6,12 @@
     row-gap: 16px;
     margin-top: 20px;
     margin-bottom: 104px;
+    @media screen and (max-width: 700px) { 
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));       
+        // grid-template-columns: repeat(1, 1fr);
+        // grid-template-rows: repeat(8, 42px);
+        margin-bottom: 80px;
+    }
     &__text {
         font-family: "Work Sans", sans-serif;
         font-size: 14px;
@@ -104,24 +110,19 @@
         &-day {
             display: block;
             width: 56px;
-            
-
         }
         &-month {
             display: block;
             width: 91px;
-           
-
         }
         &-year {
             display: block;
             width: 68px;
-            
-
         }
 
         &-wrapp {
             display: flex;
+            gap: 10px;
             &:first-child {
                 max-width: 56px;
                 width: 100%;

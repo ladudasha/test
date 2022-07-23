@@ -21,7 +21,8 @@ html {
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: 1px solid red; }
 
 ul {
   list-style: none; }
@@ -336,22 +337,34 @@ template {
   display: none; }
 
 .main {
-  max-width: 665px;
-  width: 100%;
-  margin: 0 auto; }
+  display: flex;
+  min-height: 100vh;
+  padding: 50px; }
+  @media screen and (max-width: 500px) {
+    .main {
+      padding: 10px; } }
   .main__wrapp {
     background-color: #fff;
     display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    margin: auto; }
   .main__sidebar {
     background: #5a61ed;
     width: 137px;
     position: relative; }
+    @media screen and (max-width: 752px) {
+      .main__sidebar {
+        width: 100px; } }
   .main__content {
+    position: relative;
     padding: 40px 22px 33px 21px; }
+    .main__content-bg {
+      width: 358px;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+    @media screen and (max-width: 325px) {
+      .main__content {
+        padding: 10px; } }
   .main__title {
     font-size: 22px;
     line-height: 26px;
@@ -362,7 +375,11 @@ template {
     letter-spacing: -0.46px; }
   .main__footer {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 752px) {
+      .main__footer {
+        gap: 40px; } }
     .main__footer-text {
       font-size: 13px;
       line-height: 15px; }
@@ -379,6 +396,12 @@ template {
     color: #ffffff;
     transform: scale(-1);
     writing-mode: vertical-rl; }
+    @media screen and (max-width: 500px) {
+      .main__label {
+        font-size: 30px; } }
+    @media screen and (max-width: 350px) {
+      .main__label {
+        right: 0; } }
   .main__btn {
     padding: 7px 25px;
     background: #5a61ed;
@@ -405,6 +428,10 @@ template {
   row-gap: 16px;
   margin-top: 20px;
   margin-bottom: 104px; }
+  @media screen and (max-width: 700px) {
+    .form {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      margin-bottom: 80px; } }
   .form__text {
     font-family: "Work Sans", sans-serif;
     font-size: 14px;
@@ -495,7 +522,8 @@ template {
       display: block;
       width: 68px; }
     .form__select-wrapp {
-      display: flex; }
+      display: flex;
+      gap: 10px; }
       .form__select-wrapp:first-child {
         max-width: 56px;
         width: 100%; }

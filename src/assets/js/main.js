@@ -28,8 +28,8 @@ for (let day = 1; day <= 31; day++) {
 
 // // месяцы
 var index=0;
-var arr=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь",
-"Ноябрь","Декабрь"];
+var arr=["January ","February","March","April","May","June","July","August","September","October",
+"November","December"];
 var date=new Date();
 day=date.getDate();
 index=date.getMonth();
@@ -47,7 +47,19 @@ for(var i=0;i<12;i++){
 	index++
 	}
 // годы
-for (let year = 1995; year <= 2022; year++) {
+for (let year = 1920; year <= 2022; year++) {
   let options = document.createElement("OPTION");
   document.getElementById("year").appendChild(options).innerHTML = year;
 }
+
+
+// bg-img
+
+const bgIcon = new Vivus(
+	'bg-svg',
+	{
+	  type: 'sync',
+	  duration: 500,
+
+	}
+  );
