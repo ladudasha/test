@@ -6,10 +6,8 @@
     row-gap: 16px;
     margin-top: 20px;
     margin-bottom: 104px;
-    @media screen and (max-width: 700px) { 
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));       
-        // grid-template-columns: repeat(1, 1fr);
-        // grid-template-rows: repeat(8, 42px);
+    @media screen and (max-width: 700px) {
+        grid-template-columns: repeat(1, 1fr);
         margin-bottom: 80px;
     }
     &__text {
@@ -81,6 +79,8 @@
     }
     // стилизация выпадающего списка
     &__select {
+        width: 100%;
+        min-width: 40px;
         font-size: 14px;
         appearance: none;
         -moz-appearance: none;
@@ -106,34 +106,30 @@
                 width: 8px;
                 height: 4px;
             }
-        }
-        &-day {
-            display: block;
-            width: 56px;
-        }
-        &-month {
-            display: block;
-            width: 91px;
-        }
-        &-year {
-            display: block;
-            width: 68px;
+            &--day {
+                max-width: 56px;
+                width: 100%;
+                @media screen and (max-width: 400px) {
+                    max-width: 10%;
+                }
+            }
+            &--month {
+                max-width: 91px;
+                width: 100%;
+            }
+            &--year {
+                max-width: 68px;
+                width: 100%;
+            }
         }
 
         &-wrapp {
             display: flex;
             gap: 10px;
-            &:first-child {
-                max-width: 56px;
-                width: 100%;
-            }
-            &::nth-child(2n) {
-                max-width: 91px;
-                width: 100%;
-            }
-            &:last-child {
-                max-width: 68px;
-                width: 100%;
+            max-width: 100%;
+            @media screen and (max-width: 700px) {
+                gap: 0;
+                justify-content: space-between;
             }
         }
     }

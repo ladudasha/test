@@ -21,8 +21,7 @@ html {
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  border: 1px solid red; }
+  box-sizing: border-box; }
 
 ul {
   list-style: none; }
@@ -349,11 +348,36 @@ template {
     margin: auto; }
   .main__sidebar {
     background: #5a61ed;
-    width: 137px;
-    position: relative; }
-    @media screen and (max-width: 752px) {
+    display: flex;
+    padding-left: 68px;
+    padding-bottom: 22px; }
+    @media screen and (max-width: 500px) {
       .main__sidebar {
-        width: 100px; } }
+        padding-left: 20px; } }
+    @media screen and (max-width: 395px) {
+      .main__sidebar {
+        padding-left: 0; } }
+  .main__label {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 63px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    transform: scale(-1);
+    writing-mode: vertical-rl;
+    width: 100%;
+    max-width: 100px; }
+    @media screen and (max-width: 752px) {
+      .main__label {
+        font-size: 30px; } }
+    @media screen and (max-width: 500px) {
+      .main__label {
+        font-size: 30px; } }
+    @media screen and (max-width: 350px) {
+      .main__label {
+        right: 0; } }
   .main__content {
     position: relative;
     padding: 40px 22px 33px 21px; }
@@ -383,25 +407,6 @@ template {
     .main__footer-text {
       font-size: 13px;
       line-height: 15px; }
-  .main__label {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 49px;
-    position: absolute;
-    bottom: 22px;
-    right: 6px;
-    line-height: 63px;
-    letter-spacing: 0.5px;
-    color: #ffffff;
-    transform: scale(-1);
-    writing-mode: vertical-rl; }
-    @media screen and (max-width: 500px) {
-      .main__label {
-        font-size: 30px; } }
-    @media screen and (max-width: 350px) {
-      .main__label {
-        right: 0; } }
   .main__btn {
     padding: 7px 25px;
     background: #5a61ed;
@@ -420,6 +425,9 @@ template {
       color: #5a61ed;
       text-decoration: underline; }
 
+option {
+  max-width: 40px; }
+
 .form {
   display: grid;
   grid-template-columns: repeat(2, 235px);
@@ -430,7 +438,7 @@ template {
   margin-bottom: 104px; }
   @media screen and (max-width: 700px) {
     .form {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(1, 1fr);
       margin-bottom: 80px; } }
   .form__text {
     font-family: "Work Sans", sans-serif;
@@ -486,6 +494,8 @@ template {
     right: 10px;
     display: none; }
   .form__select {
+    width: 100%;
+    min-width: 40px;
     font-size: 14px;
     appearance: none;
     -moz-appearance: none;
@@ -512,27 +522,26 @@ template {
         pointer-events: none;
         width: 8px;
         height: 4px; }
-    .form__select-day {
-      display: block;
-      width: 56px; }
-    .form__select-month {
-      display: block;
-      width: 91px; }
-    .form__select-year {
-      display: block;
-      width: 68px; }
-    .form__select-wrapp {
-      display: flex;
-      gap: 10px; }
-      .form__select-wrapp:first-child {
+      .form__select-block--day {
         max-width: 56px;
         width: 100%; }
-      .form__select-wrapp::nth-child(2n) {
+        @media screen and (max-width: 400px) {
+          .form__select-block--day {
+            max-width: 10%; } }
+      .form__select-block--month {
         max-width: 91px;
         width: 100%; }
-      .form__select-wrapp:last-child {
+      .form__select-block--year {
         max-width: 68px;
         width: 100%; }
+    .form__select-wrapp {
+      display: flex;
+      gap: 10px;
+      max-width: 100%; }
+      @media screen and (max-width: 700px) {
+        .form__select-wrapp {
+          gap: 0;
+          justify-content: space-between; } }
   .form__label {
     display: block;
     margin-bottom: 5px;
