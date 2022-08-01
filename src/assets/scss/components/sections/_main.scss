@@ -1,13 +1,16 @@
 .main {
-    display: flex;
     // position: absolute;
     // top: 50%;
     // left: 50%;
     // margin-right: -50%;
     // transform: translate(-50%, -50%);
+    // min-height: 100vh;
+    // max-height: 300px;
+    // padding: 50px;
+    // overflow: auto;
+    display: flex;
     min-height: 100vh;
-    padding: 50px;
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 700px) {
         padding: 10px;
     }
     &__wrapp {
@@ -59,10 +62,14 @@
 
         padding: 40px 22px 33px 21px;
         &-bg {
-            width: 358px;
+            max-width: 358px;
             position: absolute;
             bottom: 0;
             right: 0;
+            // z-index: -1;
+            @media screen and (max-width: 700px) {
+                
+            }
         }
         @media screen and (max-width: 325px) {
             padding: 10px;
@@ -83,6 +90,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        position: relative;
         @media screen and (max-width: 752px) {
             gap: 40px;
         }

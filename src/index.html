@@ -21,8 +21,10 @@
         <div class="main__content">
           <!-- bg img -->
 
-          <!-- <object class="main__content-bg" id="bg-svg" type="image/svg+xml" data="./assets/images/bg.svg"></object> -->
-
+          <object class="main__content-bg" id="bg-svg" type="image/svg+xml" data="./assets/images/bg_animated.svg">
+            
+          </object>
+         
 
           <h2 class="main__title">New user?</h2>
           <p class="main__text">Use the form below to create your account.</p>
@@ -88,33 +90,34 @@
                 </div>
               </div>
               
-              <!-- <input class="form__input" type="text" name="name" id="name" /> -->
             </div>
 
             <div class="form__field form__field-gender">
               <label class="form__label">Gender</label>
 
-              <div class="form__field-checkboxes">
-                <div>
-                  <input
+              <div class="form__checkboxes checkboxes">
+
+                <div class="checkboxes__group">
+                  <input class="checkboxes__input"
                     type="radio"
                     id="male"
                     name="gender"
                     value="male"
                     checked
                   />
-                  <label for="male">Male</label>
+                  <label class="checkboxes__label" for="male">Male</label>
                 </div>
 
-                <div>
-                  <input
+                <div class="checkboxes__group">
+                  <input class="checkboxes__input"
                     type="radio"
                     id="female"
                     name="gender"
                     value="female"
                   />
-                  <label for="female">Female</label>
+                  <label class="checkboxes__label" for="female">Female</label>
                 </div>
+
               </div>
             </div>
 

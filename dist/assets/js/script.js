@@ -59,7 +59,7 @@ const bgIcon = new Vivus(
 	'bg-svg',
 	{
 	  type: 'sync',
-	  duration: 500,
+	  duration: 800,
 
 	}
   );

@@ -18,10 +18,10 @@
     }
     &__field {
         position: relative;
-        &-checkboxes {
-            display: flex;
-            gap: 20px;
-        }
+        // &-checkboxes {
+        //     display: flex;
+        //     gap: 20px;
+        // }
         &-first {
             visibility: hidden;
             animation: visible 2s linear 1s forwards;
@@ -55,6 +55,28 @@
             animation: visible 2s linear 8s forwards;
         }
     }
+    
+    // &__choice {
+    //     appearance: none;
+    //     -moz-appearance: none;
+    //     -webkit-appearance: none;
+    //     // position: relative;
+    //     &-label {
+    //         padding-left: 25px;
+    //         cursor: pointer;
+    //     }
+    //     &::before {
+    //         @include pseudo;
+    //         width: 12px;
+    //         height: 12px;
+    //         border: 1px solid #5a61ed;
+    //         border-radius: 50%;
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         z-index: 1;
+    //     }
+    // }
     &__input {
         display: block;
         width: 100%;
