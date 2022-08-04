@@ -1,24 +1,24 @@
 // валидация мейла
 
-const reg = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+// const reg = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
 
-const input = document.getElementById('email');
-const check = document.getElementById('check');
+// const input = document.getElementById('email');
+// const check = document.getElementById('check');
 
-function onInput() {
+// function onInput() {
     
-  if (isEmailValid(input.value)) {
-    check.style.display = 'block';
-  } else {
-    input.style.borderColor = 'red';
-  }
-}
+//   if (isEmailValid(input.value)) {
+//     check.style.display = 'block';
+//   } else {
+//     input.style.borderColor = 'red';
+//   }
+// }
 
-input.addEventListener('input', onInput);
+// input.addEventListener('input', onInput);
 
-function isEmailValid(value) {
-return reg.test(value);
-}
+// function isEmailValid(value) {
+// return reg.test(value);
+// }
 
 // // дни
 for (let day = 1; day <= 31; day++) {

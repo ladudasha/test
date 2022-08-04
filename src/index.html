@@ -21,18 +21,16 @@
         <div class="main__content">
           <!-- bg img -->
 
-          <object class="main__content-bg" id="bg-svg" type="image/svg+xml" data="./assets/images/bg_animated.svg">
-            
+          <object class="main__content-bg" id="bg-svg" type="image/svg+xml" data="./assets/images/bg_animated.svg" title="background-image">            
           </object>
-         
 
           <h2 class="main__title">New user?</h2>
-          <p class="main__text">Use the form below to create your account.</p>
+          <p class="main__text">Use the form below to create your account.
+          </p>
           <form
             class="main__form form"
             id="form_id"
             method="post"
-            action=""
             onsubmit="javascript:return validate('form_id','email');"
           >
             <div class="form__field form__field-first">
@@ -52,9 +50,9 @@
 
               <div class="form__select-block">
                 <select class="form__input form__select" name="category">
-                  <option value="Moscow">Moscow</option>
+                  <option value="Moscow">Russian</option>
                   <option value="American" selected>American</option>
-                  <option value="Minsk">Minsk</option>
+                  <option value="Minsk">Ukrainian</option>
                 </select>
               </div>
             </div>
@@ -66,7 +64,6 @@
                 name="email"
                 type="email"
                 class="form__input form__input-mail"
-                type="text"
               />
               <img
                 id="check"
@@ -123,12 +120,12 @@
 
             <div class="form__field form__field-password">
               <label class="form__label">Password</label>
-              <input class="form__input" type="text" name="name" />
+              <input class="form__input" type="password" name="name" />
             </div>
 
             <div class="form__field form__field-confirm">
               <label class="form__label">Confirm Password</label>
-              <input class="form__input" type="text" name="name" />
+              <input class="form__input" type="password" name="name" />
             </div>
           </form>
 
