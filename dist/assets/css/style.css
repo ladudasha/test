@@ -30,7 +30,7 @@ ul {
 }
 
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work SansRegular', sans-serif;
     background-color: #F4F5FC;
     letter-spacing: -0.46px;
     color: #000;
@@ -374,6 +374,27 @@ template {
     display: none;
 }
 
+@font-face {
+    font-family: 'PT SansRegular';
+  src: url(../fonts/PTSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work SansLight';
+  src: url(../fonts/WorkSans-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work SansRegular';
+  src: url(../fonts/WorkSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
 .main {
     display: -ms-flexbox;
     display: flex;
@@ -398,12 +419,21 @@ template {
     display: -ms-flexbox;
     display: flex;
     padding-left: 68px;
-    padding-bottom: 22px;
+    padding-bottom: 27px;
+}
+
+@media screen and (max-width: 700px) {
+    .main__sidebar {
+        -ms-flex-align: end;
+        align-items: flex-end;
+        padding-top: 22px;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .main__sidebar {
         padding-left: 20px;
+        padding-top: 22px;
     }
 }
 
@@ -414,9 +444,7 @@ template {
 }
 
 .main__label {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'PT SansRegular', sans-serif;
     font-size: 49px;
     line-height: 63px;
     letter-spacing: 0.5px;
@@ -430,9 +458,11 @@ template {
     max-width: 100px;
 }
 
-@media screen and (max-width: 752px) {
+@media screen and (max-width: 700px) {
     .main__label {
         font-size: 30px;
+        position: sticky;
+        bottom: 22px;
     }
 }
 
@@ -448,16 +478,16 @@ template {
     }
 }
 
-.main__content {
-    position: relative;
-    padding: 40px 22px 33px 21px;
-}
-
-.main__content-bg {
+.main__bg {
     max-width: 358px;
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.main__content {
+    position: relative;
+    padding: 45px 16px 33px 21px;
 }
 
 @media screen and (max-width: 325px) {
@@ -467,20 +497,27 @@ template {
 }
 
 .main__title {
+    font-family: 'Work SansRegular', sans-serif;
     font-size: 22px;
     line-height: 26px;
     letter-spacing: -0.46px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 110px;
+    width: 100%;
 }
 
 .main__text {
-    font-size: 14px;
+    font-family: 'Work SansLight', sans-serif;
+    font-size: 15px;
     line-height: 16px;
-    letter-spacing: -0.46px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    max-width: 285px;
+    max-width: 286px;
     width: 100%;
 }
 
@@ -510,9 +547,7 @@ template {
     background: #5a61ed;
     width: 153px;
     height: 32px;
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'PT SansRegular', sans-serif;
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
@@ -533,7 +568,7 @@ option {
     max-width: 40px;
 }
 
-.form {
+.form__grid {
     display: grid;
     grid-template-columns: repeat(2, 235px);
     grid-template-rows: repeat(4, 42px);
@@ -546,17 +581,10 @@ option {
 }
 
 @media screen and (max-width: 700px) {
-    .form {
+    .form__grid {
         grid-template-columns: repeat(1, 1fr);
         margin-bottom: 80px;
     }
-}
-
-.form__text {
-    font-family: "Work Sans", sans-serif;
-    font-size: 14px;
-    line-height: 16px;
-    color: #111111;
 }
 
 .form__field {
@@ -712,8 +740,8 @@ option {
 .form__label {
     display: block;
     margin-bottom: 5px;
-    font-family: "Work Sans", sans-serif;
-    font-size: 12px;
+    font-family: 'Work SansLight', sans-serif;
+    font-size: 13px;
     line-height: 14px;
     color: #7c7c7c;
 }

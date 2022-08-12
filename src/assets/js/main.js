@@ -1,24 +1,15 @@
-// валидация мейла
+// Here, the ease animation will be use for the global drawing.
+new Vivus(
+	'main__bg',
+	{
+	  type: 'delayed',
+	  duration: 800
+	}	
+  );
 
-// const reg = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
 
-// const input = document.getElementById('email');
-// const check = document.getElementById('check');
 
-// function onInput() {
-    
-//   if (isEmailValid(input.value)) {
-//     check.style.display = 'block';
-//   } else {
-//     input.style.borderColor = 'red';
-//   }
-// }
 
-// input.addEventListener('input', onInput);
-
-// function isEmailValid(value) {
-// return reg.test(value);
-// }
 
 // // дни
 for (let day = 1; day <= 31; day++) {
@@ -53,13 +44,36 @@ for (let year = 1920; year <= 2022; year++) {
 }
 
 
-// bg-img
 
-const bgIcon = new Vivus(
-	'bg-svg',
-	{
-	  type: 'sync',
-	  duration: 800,
+// валидация мейла
 
+$(function() {
+	$(".main__btn").on("check", validate);
+   
+	// Validate email
+	function validateEmail(email) {
+	  var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+	  return re.test(String(email).toLowerCase());
 	}
-  );
+	 
+	// send form
+	function sendForm() {
+	  $(".error").text("Form sending").fadeIn();
+	}
+   
+	// validate email and send form after success validation
+	function validate() {
+	  var email = $(".form__input-mail").val();
+	  var $error = $(".error");
+	  $error.text("");
+   
+	  if (validateEmail(email)) {
+		$error.fadeOut();
+		sendForm();
+	  } else {
+		$error.fadeIn();
+		$error.text(email + " is not valid");
+	  }
+	  return false;
+	}
+  });

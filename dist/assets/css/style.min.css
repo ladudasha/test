@@ -27,7 +27,7 @@ ul {
   list-style: none; }
 
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Work SansRegular', sans-serif;
   background-color: #F4F5FC;
   letter-spacing: -0.46px;
   color: #000; }
@@ -335,6 +335,24 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'PT SansRegular';
+  src: url(../fonts/PTSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Work SansLight';
+  src: url(../fonts/WorkSans-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Work SansRegular';
+  src: url(../fonts/WorkSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-display: swap; }
+
 .main {
   display: flex;
   min-height: 100vh; }
@@ -349,7 +367,7 @@ template {
     background: #5a61ed;
     display: flex;
     padding-left: 68px;
-    padding-bottom: 22px; }
+    padding-bottom: 27px; }
     @media screen and (max-width: 700px) {
       .main__sidebar {
         align-items: flex-end;
@@ -362,9 +380,7 @@ template {
       .main__sidebar {
         padding-left: 0; } }
   .main__label {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'PT SansRegular', sans-serif;
     font-size: 49px;
     line-height: 63px;
     letter-spacing: 0.5px;
@@ -384,18 +400,19 @@ template {
     @media screen and (max-width: 350px) {
       .main__label {
         right: 0; } }
+  .main__bg {
+    max-width: 358px;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
   .main__content {
     position: relative;
-    padding: 40px 22px 33px 21px; }
-    .main__content-bg {
-      max-width: 358px;
-      position: absolute;
-      bottom: 0;
-      right: 0; }
+    padding: 45px 16px 33px 21px; }
     @media screen and (max-width: 325px) {
       .main__content {
         padding: 10px; } }
   .main__title {
+    font-family: 'Work SansRegular', sans-serif;
     font-size: 22px;
     line-height: 26px;
     letter-spacing: -0.46px;
@@ -406,14 +423,14 @@ template {
     max-width: 110px;
     width: 100%; }
   .main__text {
-    font-size: 14px;
+    font-family: 'Work SansLight', sans-serif;
+    font-size: 15px;
     line-height: 16px;
-    letter-spacing: -0.46px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    max-width: 285px;
+    max-width: 286px;
     width: 100%; }
   .main__footer {
     display: flex;
@@ -431,9 +448,7 @@ template {
     background: #5a61ed;
     width: 153px;
     height: 32px;
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'PT SansRegular', sans-serif;
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
@@ -447,7 +462,7 @@ template {
 option {
   max-width: 40px; }
 
-.form {
+.form__grid {
   display: grid;
   grid-template-columns: repeat(2, 235px);
   grid-template-rows: repeat(4, 42px);
@@ -456,115 +471,115 @@ option {
   margin-top: 20px;
   margin-bottom: 104px; }
   @media screen and (max-width: 700px) {
-    .form {
+    .form__grid {
       grid-template-columns: repeat(1, 1fr);
       margin-bottom: 80px; } }
-  .form__text {
-    font-family: "Work Sans", sans-serif;
-    font-size: 14px;
-    line-height: 16px;
-    color: #111111; }
-  .form__field {
+
+.form__field {
+  position: relative; }
+  .form__field-first {
+    visibility: hidden;
+    animation: visible 2s linear 1s forwards; }
+  .form__field-last {
+    visibility: hidden;
+    animation: visible 2s linear 2s forwards; }
+  .form__field-nationality {
+    visibility: hidden;
+    animation: visible 2s linear 3s forwards; }
+  .form__field-mail {
+    visibility: hidden;
+    animation: visible 2s linear 4s forwards; }
+  .form__field-birdth {
+    visibility: hidden;
+    animation: visible 2s linear 5s forwards; }
+  .form__field-gender {
+    visibility: hidden;
+    animation: visible 2s linear 6s forwards; }
+  .form__field-password {
+    visibility: hidden;
+    animation: visible 2s linear 7s forwards; }
+  .form__field-confirm {
+    visibility: hidden;
+    animation: visible 2s linear 8s forwards; }
+
+.form__input {
+  display: block;
+  width: 100%;
+  height: 27px;
+  padding-bottom: 6px;
+  border: none;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: transparent;
+  outline: 0;
+  font-size: 14px; }
+  .form__input-mail {
     position: relative; }
-    .form__field-first {
-      visibility: hidden;
-      animation: visible 2s linear 1s forwards; }
-    .form__field-last {
-      visibility: hidden;
-      animation: visible 2s linear 2s forwards; }
-    .form__field-nationality {
-      visibility: hidden;
-      animation: visible 2s linear 3s forwards; }
-    .form__field-mail {
-      visibility: hidden;
-      animation: visible 2s linear 4s forwards; }
-    .form__field-birdth {
-      visibility: hidden;
-      animation: visible 2s linear 5s forwards; }
-    .form__field-gender {
-      visibility: hidden;
-      animation: visible 2s linear 6s forwards; }
-    .form__field-password {
-      visibility: hidden;
-      animation: visible 2s linear 7s forwards; }
-    .form__field-confirm {
-      visibility: hidden;
-      animation: visible 2s linear 8s forwards; }
-  .form__input {
-    display: block;
-    width: 100%;
-    height: 27px;
-    padding-bottom: 6px;
-    border: none;
-    border-bottom: 1px solid #f2f2f2;
-    background-color: transparent;
-    outline: 0;
-    font-size: 14px; }
-    .form__input-mail {
-      position: relative; }
-  .form__check {
-    width: 11px;
-    height: 8px;
-    position: absolute;
-    top: 62%;
-    right: 10px;
+
+.form__check {
+  width: 11px;
+  height: 8px;
+  position: absolute;
+  top: 62%;
+  right: 10px;
+  display: none; }
+
+.form__select {
+  width: 100%;
+  min-width: 40px;
+  font-size: 14px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  border-bottom: 1px solid #f2f2f2; }
+  .form__select__select::-ms-expand {
     display: none; }
-  .form__select {
-    width: 100%;
-    min-width: 40px;
-    font-size: 14px;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-    border-bottom: 1px solid #f2f2f2; }
-    .form__select__select::-ms-expand {
-      display: none; }
-    .form__select-block {
-      position: relative; }
-      .form__select-block::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 8px;
-        right: 0px;
-        background-image: url("../images/row.svg");
-        display: block;
-        background-repeat: no-repeat;
-        background-position: center;
-        pointer-events: none;
-        width: 8px;
-        height: 4px; }
-      .form__select-block--day {
-        max-width: 56px;
-        width: 100%; }
-        @media screen and (max-width: 400px) {
-          .form__select-block--day {
-            max-width: 10%; } }
-      .form__select-block--month {
-        max-width: 91px;
-        width: 100%; }
-      .form__select-block--year {
-        max-width: 68px;
-        width: 100%; }
-    .form__select-wrapp {
-      display: flex;
-      gap: 10px;
-      max-width: 100%; }
-      @media screen and (max-width: 700px) {
-        .form__select-wrapp {
-          gap: 0;
-          justify-content: space-between; } }
-  .form__label {
-    display: block;
-    margin-bottom: 5px;
-    font-family: "Work Sans", sans-serif;
-    font-size: 12px;
-    line-height: 14px;
-    color: #7c7c7c; }
+  .form__select-block {
+    position: relative; }
+    .form__select-block::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: 0px;
+      background-image: url("../images/row.svg");
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+      width: 8px;
+      height: 4px; }
+    .form__select-block--day {
+      max-width: 56px;
+      width: 100%; }
+      @media screen and (max-width: 400px) {
+        .form__select-block--day {
+          max-width: 10%; } }
+    .form__select-block--month {
+      max-width: 91px;
+      width: 100%; }
+    .form__select-block--year {
+      max-width: 68px;
+      width: 100%; }
+  .form__select-wrapp {
+    display: flex;
+    gap: 10px;
+    max-width: 100%; }
+    @media screen and (max-width: 700px) {
+      .form__select-wrapp {
+        gap: 0;
+        justify-content: space-between; } }
+
+.form__label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Work SansLight', sans-serif;
+  font-size: 13px;
+  line-height: 14px;
+  color: #7c7c7c; }
 
 @keyframes visible {
   0% {

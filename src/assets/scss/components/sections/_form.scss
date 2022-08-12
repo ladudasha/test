@@ -1,27 +1,21 @@
 .form {
-    display: grid;
-    grid-template-columns: repeat(2, 235px);
-    grid-template-rows: repeat(4, 42px);
-    column-gap: 13px;
-    row-gap: 16px;
-    margin-top: 20px;
-    margin-bottom: 104px;
-    @media screen and (max-width: 700px) {
-        grid-template-columns: repeat(1, 1fr);
-        margin-bottom: 80px;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 235px);
+        grid-template-rows: repeat(4, 42px);
+        column-gap: 13px;
+        row-gap: 16px;
+        margin-top: 20px;
+        margin-bottom: 104px;
+        @media screen and (max-width: 700px) {
+            grid-template-columns: repeat(1, 1fr);
+            margin-bottom: 80px;
+        }
+
     }
-    &__text {
-        font-family: "Work Sans", sans-serif;
-        font-size: 14px;
-        line-height: 16px;
-        color: #111111;
-    }
+
     &__field {
         position: relative;
-        // &-checkboxes {
-        //     display: flex;
-        //     gap: 20px;
-        // }
         &-first {
             visibility: hidden;
             animation: visible 2s linear 1s forwards;
@@ -137,8 +131,8 @@
     &__label {
         display: block;
         margin-bottom: 5px;
-        font-family: "Work Sans", sans-serif;
-        font-size: 12px;
+        font-family: 'Work SansLight', sans-serif;
+        font-size: 13px;
         line-height: 14px;
         color: #7c7c7c;
     }

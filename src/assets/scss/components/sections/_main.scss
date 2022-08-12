@@ -1,13 +1,4 @@
 .main {
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // margin-right: -50%;
-    // transform: translate(-50%, -50%);
-    // min-height: 100vh;
-    // max-height: 300px;
-    // padding: 50px;
-    // overflow: auto;
     display: flex;
     min-height: 100vh;
     @media screen and (max-width: 700px) {
@@ -22,7 +13,9 @@
         background: #5a61ed;
         display: flex;
         padding-left: 68px;
-        padding-bottom: 22px;
+        padding-bottom: 27px;
+        // padding-left: 68px;
+        // padding-bottom: 22px;
         @media screen and (max-width: 700px) {
             align-items: flex-end;
             padding-top: 22px;
@@ -36,9 +29,9 @@
         }
     }
     &__label {
-        font-family: "PT Sans";
-        font-style: normal;
-        font-weight: 400;
+        font-family: 'PT SansRegular', sans-serif;
+        // font-style: normal;
+        // font-weight: 400;
         font-size: 49px;
         line-height: 63px;
         letter-spacing: 0.5px;
@@ -62,25 +55,30 @@
             right: 0;
         }
     }
-    &__content {
-        position: relative;
-
-        // background:url("../images/bg.svg") right bottom no-repeat;
-
-        padding: 40px 22px 33px 21px;
-        &-bg {
-            max-width: 358px;
+    &__bg {
+        max-width: 358px;
             position: absolute;
             bottom: 0;
             right: 0;
-            // z-index: -1;
-        }
+
+    }
+    &__content {
+        position: relative;
+        padding: 45px 16px 33px 21px;
+
+        // &-bg {
+        //     max-width: 358px;
+        //     position: absolute;
+        //     bottom: 0;
+        //     right: 0;
+        // }
         @media screen and (max-width: 325px) {
             padding: 10px;
         }
     }
 
     &__title {
+        font-family: 'Work SansRegular', sans-serif;
         font-size: 22px;
         line-height: 26px;
         letter-spacing: -0.46px;
@@ -93,15 +91,16 @@
         width: 100%;
     }
     &__text {
-        font-size: 14px;
+        font-family: 'Work SansLight', sans-serif;
+        font-size: 15px;
         line-height: 16px;
-        letter-spacing: -0.46px;
+       
 
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        max-width: 285px;
+        max-width: 286px;
         width: 100%;
     }
     &__footer {
@@ -123,9 +122,7 @@
         background: #5a61ed;
         width: 153px;
         height: 32px;
-        font-family: "PT Sans";
-        font-style: normal;
-        font-weight: 400;
+        font-family: 'PT SansRegular', sans-serif;
         font-size: 14px;
         line-height: 18px;
         color: #ffffff;
