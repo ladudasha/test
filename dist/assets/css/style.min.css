@@ -632,4 +632,7 @@ option {
 .checkboxes__input:checked + .checkboxes__label::after {
   opacity: 1; }
 
+._error {
+  border-color: red; }
+
 /*# sourceMappingURL=style.min.css.map */

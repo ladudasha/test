@@ -5,3 +5,8 @@
 @import './components/sections/main';
 @import './components/sections/form';
 @import './components/sections/checkboxes';
+
+._error {
+    border-color: red;
+}
+

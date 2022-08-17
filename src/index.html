@@ -38,12 +38,12 @@
 								<label class="form__label form__label-first" for="name"
 									>First Name
 								</label>
-								<input class="form__input" type="text" name="name" id="name" />
+								<input class="form__input _req" type="text" name="name" id="name" />
 							</div>
 
 							<div class="form__field form__field-last">
 								<label class="form__label">Last Name </label>
-								<input class="form__input" type="text" name="name" />
+								<input class="form__input _req" type="text" name="name" />
 							</div>
 
 							<div class="form__field form__field-nationality">
@@ -59,12 +59,12 @@
 							</div>
 
 							<div class="form__field form__field-mail">
-								<label class="form__label">E-mail</label>
+								<label class="form__label" for="email">E-mail</label>
 								<input
 									id="email"
 									name="email"
 									type="email"
-									class="form__input form__input-mail"
+									class="form__input form__input-mail _req _email"
 								/>
 								<span class="error"></span>
 
@@ -122,12 +122,13 @@
 
 							<div class="form__field form__field-password">
 								<label class="form__label">Password</label>
-								<input class="form__input" type="password" name="name" />
+								<input class="form__input _req" type="password" name="name" minlength="8" />
+								<div class="invalid-feedback"></div>
 							</div>
 
 							<div class="form__field form__field-confirm">
 								<label class="form__label">Confirm Password</label>
-								<input class="form__input" type="password" name="name" />
+								<input class="form__input _req" type="password" name="name" minlength="8" />
 							</div>
 						</div>
 
