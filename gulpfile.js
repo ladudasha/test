@@ -3,7 +3,7 @@
 // Подключаем модули
 const { src, dest } = require('gulp');
 const gulp = require('gulp');
-var ghPages = require('gulp-gh-pages');
+const ghPages = require('gulp-gh-pages');
 const sourcemaps = require('gulp-sourcemaps'); // благодаря ему в браузере видим не минифицированный код, а привычную разметку
 const autoprefixer = require('gulp-autoprefixer'); // расставляет префиксы для поддержки свойств в разных браузерах
 const cssbeautify = require('gulp-cssbeautify'); // форматирует css, чтобы он был легким для чтения
@@ -62,12 +62,10 @@ const jsFiles = [
 
 // TASKS
 // объявляем функции под сборки (все пути относительные)
-
 gulp.task('deploy', function() {
     return gulp.src('./dist/**/*')
       .pipe(ghPages());
   });
-
 // Локальный сервер
 function serve() {
     browserSync.init({
