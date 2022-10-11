@@ -28,7 +28,9 @@
     "IE 10"
   ],
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

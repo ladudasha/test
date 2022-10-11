@@ -5,8 +5,12 @@
 @import './components/sections/main';
 @import './components/sections/form';
 @import './components/sections/checkboxes';
+@import './vendor/animate.scss';
+
 
 ._error {
     border-color: red;
 }
+
+
 

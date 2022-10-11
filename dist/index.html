@@ -8,15 +8,14 @@
 		<title>gulp project</title>
 	</head>
 	<body>
-		<section class="main">
+		<main class="main">
 			<div class="main__wrapp">
 				<div class="main__sidebar">
 					<p class="main__label">Sign up</p>
 				</div>
 
 				<div class="main__content">
-					<!-- bg img -->
-					<!-- class="main__content-bg" -->
+					<!-- bg-img -->
 					<object
 						class="main__bg"
 						id="main__bg"
@@ -122,13 +121,13 @@
 
 							<div class="form__field form__field-password">
 								<label class="form__label">Password</label>
-								<input class="form__input _req" type="password" name="name" minlength="8" />
+								<input class="form__input _req" type="password"  id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Должно содержать по крайней мере одно число, одну заглавную и строчную буквы, а также не менее 8 и более символов" />
 								<div class="invalid-feedback"></div>
 							</div>
 
 							<div class="form__field form__field-confirm">
 								<label class="form__label">Confirm Password</label>
-								<input class="form__input _req" type="password" name="name" minlength="8" />
+								<input class="form__input _req" type="password" name="name" minlength="8"/>
 							</div>
 						</div>
 
@@ -138,14 +137,14 @@
 									Have an account?
 									<span><a class="main__login-link" href="">Login</a></span>
 								</p>
-								<!-- <a class="main__login-link" href="">Login</a> -->
 							</div>
-							<button class="main__btn" type="submit">Complete Signup</button>
+							<button class="main__btn animate__animated " type="submit" id="btn">Complete Signup</button>
+
 						</div>
 					</form>
 				</div>
 			</div>
-		</section>
+		</main>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
 		<script src="./assets/js/script.js"></script>

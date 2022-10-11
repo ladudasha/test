@@ -8,19 +8,23 @@ new Vivus("main__bg", {
 
 document.addEventListener("DOMContentLoaded", function () {
 	const form = document.getElementById("form_id");
-	form.addEventListener("submit", formSend);
+	
+	form.addEventListener("submit",formSend);
 
-	async function formSend(e) {
+	async function formSend(e) {		
+		
 		e.preventDefault();
 
 		let error = formValidate(form);
 
 		if (error === 0) {
-			
-		} else {
-			alert('Заполните обязательные поля');
-		}
+		} else {					
+			// alert("Заполните обязательные поля");
+			document.getElementById('btn').classList.toggle('animate__shakeX');
+		} 		
+		
 	}
+	
 
 	function formValidate(form) {
 		let error = 0;
@@ -53,36 +57,36 @@ document.addEventListener("DOMContentLoaded", function () {
 		input.parentElement.classList.remove("_error");
 		input.classList.remove("_error");
 	}
+
+	
+
+
+
 	// функция теста email
 	function emailTest(input) {
 		return !/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(
 			input.value
-			
 		);
 	}
-
 });
-
 
 // валидация мейла
 
 const reg = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
-const input = document.getElementById('email');
-const check = document.getElementById('check');
+const input = document.getElementById("email");
+const check = document.getElementById("check");
 
 function onInput() {
-    
-  if (isEmailValid(input.value)) {
-    check.style.display = 'block';
-  } 
+	if (isEmailValid(input.value)) {
+		check.style.display = "block";
+	}
 }
 
-input.addEventListener('input', onInput);
+input.addEventListener("input", onInput);
 
 function isEmailValid(value) {
-return reg.test(value);
+	return reg.test(value);
 }
-
 
 
 
@@ -130,4 +134,50 @@ for (let year = 1920; year <= 2022; year++) {
 	document.getElementById("year").appendChild(options).innerHTML = year;
 }
 
+
+// password
+
+var myInput = document.getElementById("psw");
+
+// Когда пользователь начинает вводить что-то в поле пароля
+myInput.onkeyup = function() {
+  // Проверка строчных букв
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+}
+
+  // Проверка заглавных букв
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Проверка чисел
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  // Проверить длину
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+};
 
